@@ -9,3 +9,4 @@ crewai
 crewai-tools
 pypdf
 sentence-transformers
+chromadb
