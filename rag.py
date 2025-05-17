@@ -136,7 +136,6 @@ def get_web_content(query):
     """Get content from web scraping"""
     crew = setup_web_scraping_agent()
     result = crew.kickoff(inputs={"topic": query})
-    print("DEBUG: result.raw =", result.raw)
     if isinstance(result.raw, dict):
         url = result.raw.get ("source") or result.raw.get("url") or "Unknown URL"
         content = result.raw.get("content", "")

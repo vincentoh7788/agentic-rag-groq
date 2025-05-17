@@ -5,8 +5,8 @@ langchain-huggingface == 0.2.0
 langchain-groq == 0.3.2
 faiss-cpu == 1.11.0
 transformers
-crewai
-crewai-tools
+crewai == 0.119.0
+crewai-tools == 0.44.0
 pypdf
 sentence-transformers
 pysqlite3-binary
