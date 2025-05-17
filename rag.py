@@ -228,12 +228,10 @@ def main():
     upload_file = st.file_uploader("Upload your knowledge base in PDF file:", type=["pdf"])
 
     if upload_file is not None and query.strip():
-        with st.spinner("Setting up your knowledge base. This may take a minute..."):
-            with open("uploaded_file.pdf", "wb") as f:
-                f.write(upload_file.read())
-            pdf_path = "uploaded_file.pdf"  # Path to your PDF file
-            vector_db = setup_vector_db(pdf_path)
-        st.success("Knowledge base is ready!")
+        with open("uploaded_file.pdf", "wb") as f:
+            f.write(upload_file.read())
+        pdf_path = "uploaded_file.pdf"  # Path to your PDF file
+        vector_db = setup_vector_db(pdf_path)
     # Process query
         if st.button("Submit"):
             # Get initial context from PDF for routing
