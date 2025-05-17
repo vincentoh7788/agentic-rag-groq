@@ -1,10 +1,9 @@
 streamlit
-python-dotenv
-langchain
-langchain-community
-langchain-huggingface
-langchain-groq
-faiss-cpu
+langchain == 0.3.25
+langchain-community == 0.3.24
+langchain-huggingface == 0.2.0
+langchain-groq == 0.3.2
+faiss-cpu == 1.11.0
 transformers
 crewai
 crewai-tools
