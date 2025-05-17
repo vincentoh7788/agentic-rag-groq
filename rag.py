@@ -114,9 +114,9 @@ def setup_web_scraping_agent():
         "This format is required for proper source citation in the final answer."
         ),
         expected_output=(
-             "A dictionary in the form:\n"
+        "A dictionary in the form:\n"
         "{'source': '<url>', 'content': '<concise summary>'}\n\n"
-        "The summary must capture the most relevant findings related to the topic: '{topic}', "
+        "The summary must capture the most relevant findings related to the topic, "
         "and the 'source' must be the original web page URL."
         ),
         tools=[scrape_website],
