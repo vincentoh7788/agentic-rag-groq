@@ -223,13 +223,17 @@ def main():
     st.title("Agentic RAG Demo")
     st.write("This is a demo of the Agentic RAG system.")
     st.write("Ask a question as query and check the answer.")
+    st.write("Example: What is Agentic RAG?")
     query = st.text_input("Enter your query:")
     upload_file = st.file_uploader("Upload your knowledge base in PDF file:", type=["pdf"])
+
     if upload_file is not None and query.strip():
-        with open("uploaded_file.pdf", "wb") as f:
-            f.write(upload_file.read())
-        pdf_path = "uploaded_file.pdf"  # Path to your PDF file
-        vector_db = setup_vector_db(pdf_path)
+        with st.spinner("Setting up your knowledge base. This may take a minute..."):
+            with open("uploaded_file.pdf", "wb") as f:
+                f.write(upload_file.read())
+            pdf_path = "uploaded_file.pdf"  # Path to your PDF file
+            vector_db = setup_vector_db(pdf_path)
+        st.success("Knowledge base is ready!")
     # Process query
         if st.button("Submit"):
             # Get initial context from PDF for routing
