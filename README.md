@@ -3,7 +3,7 @@ LLM used: llama-3.3-70b-versatile via Groq API and gemini/gemini-1.5-flash for C
 Embeddings: sentence-transformers/all-mpnet-base-v2 <br>
 Vector DB: FAISS <br>
 Important Libraries: HuggingFace, LangChain, CrewAI <br>
-Deployment: Streamlit cloud <br>
+Demo Deployment: https://agentic-rag5471.streamlit.app/
 
 # Flow
 ![Agentic RAG](agentic_rag.png)
